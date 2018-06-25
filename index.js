@@ -6,10 +6,10 @@ const change1 = function() {
 }
 
 const change2 = function() {
-    const h = document.querySelector('#h101')
-    h.textContent = 'Greedy is good!'
+    const h1 = document.querySelector('#h101')
+    h1.textContent = 'Great is good!'
   }
 
 
 button.addEventListener('click', change1)
-//button.addEventListener('click', change2)
+button.addEventListener('click', change2)
