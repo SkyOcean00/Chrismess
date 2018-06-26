@@ -18,11 +18,9 @@ const addFlick = function(ev) {
 }
 function adds1(flickName){
   const s1 = document.createElement('span')
+  s1.setAttribute('class',"style1")
   s1.textContent = flickName
-  s1.style.font='22px arial, sans-serif'
-  s1.style.color = 'red'
-  s1.style.backgroundColor = 'gold'
-  s1.style.textAlign ='center'
+  
   return s1
 }
 function adds2(year){

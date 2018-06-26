@@ -13,7 +13,12 @@ body {
     margin: auto;
 }
 
-
+.style1{
+    font: 22px arial, sans-serif;
+    color: red;
+  background-Color:gold;
+  text-Align: center;
+}
 h1{
 	font-family:serif italic,'Times New Roman', Times,  ;
 	font-size:30px;
