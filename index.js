@@ -1,43 +1,17 @@
-const button = document.querySelector('button')
+const form = document.querySelector('form#flickForm')
 
-const change = function() {
-  const h = document.querySelector('h1')
-  h.textContent = 'Wuuu Yeah!'
-}
-button.addEventListener('click', change)
-const change2 = function() {
-    const h = document.querySelector('#h101')
-    h.textContent = 'Greedy is good!'
-  }
-button.addEventListener('click', change2)
+const changeHeading = function(ev) {
+  ev.preventDefault()
+  const f = ev.target
 
-const submit = document.querySelector('#i100')
+  const flickName = f.flickName.value
+  const item = document.createElement('li')
+  item.textContent = flickName
 
+  const list = document.querySelector('#flicks')
+  list.appendChild(item)
 
-const change1 = function() {
-  const h = document.querySelector('h1')
-  h.textContent = document.querySelector("#ahead").value
-  
+  f.reset()
 }
 
-submit.addEventListener('click', change1)
-
-document.getElementById("i100").addEventListener("click", function(event) {
-    
-    event.preventDefault();
-}, false);
-
-
-document.addEventListener('keypress', (event) => {
-    const keyName = event.key;
-    const result = document.getElementById("ahead").innerHTML;
-    const h1 = document.getElementById('ALLA')
-       if (keyName === 'Enter') {
-        h1.textContent = result.innerHTML;
-        }
-
-    }
-)
-
-//eventlistener for form submit
-document.querySelector('form').addEventListener('submit',change1)
+form.addEventListener('submit', changeHeading)
