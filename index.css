@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+    background:
+    url(http://backgroundcheckall.com/wp-content/uploads/2017/12/watercolour-splash-background-12.jpg)    
+    no-repeat
+    center;
+  padding: 5px 0 5px 25px;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+.cet{
+    max-width: 200px;
+    margin: auto;
 }
 
-.s1 {
-    text-align: center;
-    color: red;
-}
 
-.s2 {
-    text-align: center;
-    color: #51ff00;
+h1{
+	font-family:serif italic,'Times New Roman', Times,  ;
+	font-size:30px;
+	text-align:center;
+	background-color:#37b6ae;
+	border-color:#f9cdad;
+	border-style:solid;
+	border-width:8px;
+	color:white;
 }
