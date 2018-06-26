@@ -1,12 +1,13 @@
 const form = document.querySelector('form#flickForm')
 
-const changeHeading = function(ev) {
+const addFlick = function(ev) {
   ev.preventDefault()
   const f = ev.target
-
+  const year = f.Year.value
   const flickName = f.flickName.value
   const item = document.createElement('li')
   item.textContent = flickName
+  item.textContent +=' '+year
 
   const list = document.querySelector('#flicks')
   list.appendChild(item)
@@ -14,4 +15,4 @@ const changeHeading = function(ev) {
   f.reset()
 }
 
-form.addEventListener('submit', changeHeading)
+form.addEventListener('submit', addFlick)
