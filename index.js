@@ -38,3 +38,6 @@ document.addEventListener('keypress', (event) => {
 
     }
 )
+
+//eventlistener for form submit
+document.querySelector('form').addEventListener('submit',change1)
