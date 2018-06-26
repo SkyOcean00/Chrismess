@@ -10,8 +10,16 @@ const addFlick = function(ev) {
   const s2 = document.createElement('span')
 
   s1.textContent = flickName
-  s2.textContent =' '+year
+  s2.textContent ='   '+year
 
+  s1.style.font='22px arial, sans-serif'
+  s1.style.color = 'red'
+  s1.style.backgroundColor = 'gold'
+  s1.style.textAlign ='center'
+  s2.style.color = '#51ff00'
+  s2.style.fontSize='18px'
+  s2.style.textAlign ='center'
+  s2.style.backgroundColor = 'silver'
   item.appendChild(s1)
   item.appendChild(s2)
   

@@ -3,3 +3,13 @@
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
+
+.s1 {
+    text-align: center;
+    color: red;
+}
+
+.s2 {
+    text-align: center;
+    color: #51ff00;
+}
