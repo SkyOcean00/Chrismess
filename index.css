@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|Parisienne');
 
 body {
     background:
@@ -20,8 +20,8 @@ body {
   text-Align: center;
 }
 h1{
-	font-family:serif italic,'Times New Roman', Times,  ;
-	font-size:30px;
+	font-family: Parisienne,cursive  ;
+	font-size:38px;
 	text-align:center;
 	background-color:#37b6ae;
 	border-color:#f9cdad;
