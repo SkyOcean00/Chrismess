@@ -70,6 +70,8 @@ function buttonDelete(){
   let listid = this.parentElement.id
   const item =document.getElementById(listid)
   item.remove()
+  //Remove the flick from the array
+  array1.splice(listid-1,1)
+  
 }
 
-console.log(array1)
