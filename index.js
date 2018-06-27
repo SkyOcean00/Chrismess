@@ -29,19 +29,21 @@ class App {
       item.appendChild(span)
     })
 
-    //build a button add it to the list
+    //build a delete button, add it to the list
     const button = document.createElement('button')
     button.textContent = 'Delete'
     button.addEventListener( 'click', buttonDelete)
 
+    //Add a favorite button to each that lets you mark your favorites.
+    const favor = document.createElement('button')
+    favor.textContent = 'Favorite'
+    favor.addEventListener( 'click', Markit)
+
     item.id = array1.length
     item.appendChild(button)
-
+    item.appendChild(favor)
     return item
   }
-
- 
-
 
   handleSubmit(ev) {
     const f = ev.target
@@ -65,6 +67,18 @@ class App {
 }
 
 const app = new App()
+
+function Markit(){
+  let listid = this.parentElement.id
+  const item =document.getElementById(listid)
+  
+  //Display favorites differently
+  item.setAttribute('class',"favorite")
+  
+  //favorites are recorded appropriately in the array
+  array1[listid-1].favorite=true;
+
+}
 
 function buttonDelete(){
   let listid = this.parentElement.id

@@ -110,3 +110,12 @@ button[type="submit"]:hover {
 .chris {
   display: block;
 }
+
+.favorite{
+    background-color:orange;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px red,
+               1px 1px 7px green;
+    font: Arial, sans-serif;
+}
