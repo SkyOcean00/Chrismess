@@ -1,38 +1,59 @@
-const form = document.querySelector('form#flickForm')
+let array1=[]
+class App {
+  constructor() {
+    const form = document.querySelector('form#flickForm')
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault()
+      this.handleSubmit(ev)
+    })
+  }
 
-const addFlick = function(ev) {
-  ev.preventDefault()
-  const f = ev.target
-  const year = f.Year.value
-  const flickName = f.flickName.value
-  const item = document.createElement('li')
- 
-  item.appendChild(adds1(flickName))
-  item.appendChild(adds2(year))
-  
+  renderProperty(name, value) {
+    const span = document.createElement('span')
+    span.classList.add(name)
+    span.textContent = value
+    return span
+  }
 
-  const list = document.querySelector('#flicks')
-  list.appendChild(item)
+  renderItem(flick) {
+    const item = document.createElement('li')
+    item.classList.add('flick')
 
-  f.reset()
+    // get the list of properties
+    const properties = Object.keys(flick)
+
+    // loop over the properties
+    properties.forEach((propertyName) => {
+      // build a span, and append it to the list
+      const span = this.renderProperty(propertyName, flick[propertyName])
+      item.appendChild(span)
+    })
+
+    return item
+  }
+
+  handleSubmit(ev) {
+    const f = ev.target
+
+    const flick = {
+      name: f.flickName.value,
+      chris: f.chrisName.value,
+    }
+
+
+    array1.push(flick)
+
+    const item = this.renderItem(flick)
+
+    const list = document.querySelector('#flicks')
+    list.appendChild(item)
+
+    f.reset()
+    f.flickName.focus()
+  }
 }
-function adds1(flickName){
-  const s1 = document.createElement('span')
-  s1.setAttribute('class',"style1")
-  s1.textContent = flickName
-  
-  return s1
-}
-function adds2(year){
-  const s2 = document.createElement('span')
-  s2.textContent ='   '+year
 
-  s2.style.color = '#51ff00'
-  s2.style.fontSize='18px'
-  s2.style.textAlign ='center'
-  s2.style.backgroundColor = 'silver'
-  return s2
-}
- 
+const app = new App()
 
-form.addEventListener('submit', addFlick)
+
+console.log(array1)

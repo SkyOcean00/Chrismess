@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chrismess - A whole mess o' Chrismess</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chrismess - A whole mess o' Chrisses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1 id="ALLA">Chrismess </h1>
+  <header>
+    <h1>Chrismess</h1>
+    <h2>a whole mess of Chrisses</h2>
+    <img src="decoration.png" alt="">
+  </header>
 
-    <form id="flickForm" class="cet">
-        <input
-          type="text"
-          name="flickName"
-          placeholder="Enter a flick"
-          autofocus
-          required
-        >
-        <br>
-        <br>
-       
-        <input
-        type="text"  
-        name="Year"
-        placeholder="Enter the published year"
+  <form id="flickForm">
+    <div class="justTesting seriously">
+      <input
+        type="text"
+        name="flickName"
+        placeholder="Enter a flick"
         autofocus
-        required
-        >
-      <br>
-      <br>
-      <button name="b2" type="submit">Add it</button>
-      
-      <p>Here is the list:</p>
-    </form>
-       
-      <ul id="flicks" class="cet"></ul>
-        
+      >
+      <input
+        class="smaller"
+        type="text"
+        name="chrisName"
+        placeholder="Which Chris?"
+      >
+      <button type="submit">Update Heading</button>
+    </div>
+  </form>
 
-    <script src="index.js"></script>
+  <ul id="flicks"></ul>
+
+  <script src="index.js"></script>
 </body>
 </html>
