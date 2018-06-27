@@ -29,8 +29,19 @@ class App {
       item.appendChild(span)
     })
 
+    //build a button add it to the list
+    const button = document.createElement('button')
+    button.textContent = 'Delete'
+    button.addEventListener( 'click', buttonDelete)
+
+    item.id = array1.length
+    item.appendChild(button)
+
     return item
   }
+
+ 
+
 
   handleSubmit(ev) {
     const f = ev.target
@@ -40,7 +51,7 @@ class App {
       chris: f.chrisName.value,
     }
 
-
+    //store each flick in an array.
     array1.push(flick)
 
     const item = this.renderItem(flick)
@@ -55,5 +66,10 @@ class App {
 
 const app = new App()
 
+function buttonDelete(){
+  let listid = this.parentElement.id
+  const item =document.getElementById(listid)
+  item.remove()
+}
 
 console.log(array1)
